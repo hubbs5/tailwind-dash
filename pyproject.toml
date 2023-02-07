@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tailwind-dash"
+version = "0.1.0"
+description = "Test environment for integrating Dash and TailwindCSS"
+authors = ["Christian <christiandhubbs@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "tailwind_dash"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.3"
+dash = "^2.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
