@@ -11,6 +11,9 @@ packages = [{include = "tailwind_dash"}]
 python = "^3.10"
 pandas = "^1.5.3"
 dash = "^2.8.1"
+django = "3.2.17"
+django-plotly-dash = "^2.1.3"
+yfinance = "^0.2.10"
 
 
 [build-system]
