@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Custom apps
+    'apps.home',
     'apps.dashboard.dashboard',
     
     # Django Plotly
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'dpd_static_support',
-    'channels',
+    'tailwind',
+    # 'channels',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +71,7 @@ ROOT_URLCONF = 'tailwind.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
