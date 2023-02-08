@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html>
-    {% extends "base.html" %}
-    {% load static %}
-    {% load plotly_dash %}
-    <head>
-        {% plotly_header %}
-    </head>
+{% extends "base.html" %}
+{% load static %}
+{% load plotly_dash %}
+<head>
+    {% plotly_header %}
+</head>
 
-    {% block content %}
-    <section class="container-fluid app-view-window">
-        <div class="{% plotly_class name="Dashboard" template_type="div-direct"%}">
-            {% plotly_direct name="Dashboard" %}
-        </div>
-    </section>
+{% block content %}
+<section class="container-fluid app-view-window">
+    <div class="{% plotly_class name="Dashboard" template_type="div-direct"%}">
+        {% plotly_direct name="Dashboard" %}
+    </div>
+</section>
 
-    {% plotly_footer %}
-    {% endblock %}
-</html>
+{% plotly_footer %}
+{% endblock %}

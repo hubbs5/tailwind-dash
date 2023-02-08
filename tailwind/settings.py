@@ -66,6 +66,14 @@ MIDDLEWARE = [
     'django_plotly_dash.middleware.ExternalRedirectionMiddleware',
 ]
 
+PLOTLY_COMPONENTS = [
+    'dpd_static_support',
+]
+
+PLOTLY_DASH = {
+    "serve_locally": False,
+}
+
 ROOT_URLCONF = 'tailwind.urls'
 
 TEMPLATES = [
@@ -138,6 +146,15 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+    'django_plotly_dash.finders.DashAssetFinder',
+    'django_plotly_dash.finders.DashComponentFinder',
+    'django_plotly_dash.finders.DashAppDirectoryFinder',
 ]
 
 # Default primary key field type
